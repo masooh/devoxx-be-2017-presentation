@@ -20,6 +20,44 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style>
+			.reveal pre {
+                box-shadow: none;
+                width: auto;
+            }
+            .reveal pre code {
+                max-height: 700px;
+            }
+
+            mark {
+                background: none;
+            }
+
+            mark span {
+                color: #ff9900 !important;
+                font-weight: bold !important;
+            }
+
+            /* night.css mod */
+            .reveal h1,
+            .reveal h2,
+            .reveal h3,
+            .reveal h4,
+            .reveal h5,
+            .reveal h6 {
+              text-transform: none;
+            }
+            /* highlight js mod for monokai-sublime.css */
+            .hljs {
+                background: none;
+            }
+
+            .hljs-comment,
+            .hljs-deletion,
+            .hljs-meta {
+              color: #747fe6;
+            }
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -36,6 +74,10 @@
 				<section>
 					<img height="900" data-src="img/devoxxExhibitionFloor.jpg">
 					<img height="900" data-src="img/devoxxCinemaFloor.jpg">
+					<aside class="notes" data-markdown>
+						- Unten gab es Essen und Sponsoren
+						- Oben war Hackathon und die Räume
+					</aside>
 				</section>
 				<section data-background-image="img/roomLookingForward.jpg">
 				</section>
@@ -68,6 +110,28 @@
 				<section>
 					<h1>Java 9</h1>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/x7pkWlost64?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
+				</section>
+				<section>
+					<pre><code class="groovy">
+						def "should send basic request"() {
+							given: "a netty client"
+							NettyHttpClient client = new NettyHttpClient()
+
+							when: "a basic request is sent"
+							HttpResponse response = client.sendRequest(outboundRequest(...))
+
+							then: "response has status code 200 and no content"
+							assertThat(response, is(
+								response()
+									.withStatusCode(200)
+									.withHeader(header(CONTENT_LENGTH, 0))
+							))
+						}
+					</code></pre>
+					<aside class="notes" data-markdown>
+						- Groovy erlaubt Strings als Methodennamen
+						- labels wie zuvor ins Story
+					</aside>
 				</section>
 			</div>
 		</div>
