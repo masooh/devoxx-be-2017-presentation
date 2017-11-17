@@ -64,22 +64,33 @@
             <div class="slides">
                 <!--
                 -->
-                <section data-background-image="img/Banner-Devoxx-2017-V3.jpg">
-                </section>
+                <section data-background-image="img/Banner-Devoxx-2017-V3.jpg"></section>
                 <section data-external-replace="sections/introduction.html"></section>
                 <section data-markdown>
                     <textarea data-template>
                         ## Themen
 
                         - Java 9
-                        - Machine Learning
-                        - Spring Framework 5 / Spring Boot 2
                         - Kotlin
+                        - Spring Framework 5 / Spring Boot 2
                         - Reactive Programming
-                        - Serverless Functions
+                        - Machine Learning
+                        - Serverless
                     </textarea>
                 </section>
+
+
+
                 <section data-external-replace="sections/java9.html"></section>
+                <section data-external-replace="sections/modules.html"></section>
+                <section data-external-replace="sections/kotlin.html"></section>
+                <section data-external-replace="sections/spring-5-martin.html"></section>
+                <section data-external-replace="sections/reactive-programming.html"></section>
+                <section data-external-replace="sections/machine-learning.html"></section>
+                <section data-external-replace="sections/serverless.html"></section>
+                <section data-external-replace="sections/favorite-talks-leonard.html"></section>
+                <section data-external-replace="sections/favorite-talks-martin.html"></section>
+                <section data-external-replace="sections/top-rated-talks-community.html"></section>
                 <section>
                     <pre><code class="groovy">
                         def "should send basic request"() {
@@ -127,7 +138,11 @@
                 ],
                width: 1920,
                height: 1080,
-               margin: 0
+               margin: 0,
+
+               viewDistance: 3, // Number of slides away from the current that are visible (for lazy loading)
+               slideNumber: true,  // Display the page number of the current slide
+               history: true // Push each slide change to the browser history
             });
         </script>
     </body>
