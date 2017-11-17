@@ -1,27 +1,27 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Devoxx Belgium 2017</title>
+        <title>Devoxx Belgium 2017</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-		<style>
-			.reveal pre {
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <style>
+            .reveal pre {
                 box-shadow: none;
                 width: auto;
             }
@@ -57,103 +57,103 @@
             .hljs-meta {
               color: #747fe6;
             }
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<!--
-				-->
-				<section data-background-image="img/Banner-Devoxx-2017-V3.jpg">
-				</section>
-				<section>
-					<h1>Location</h1>
-				</section>
-				<section data-background-image="img/GoogleMaps-Antwerpen.png">
-				</section>
-				<section>
-					<img height="900" data-src="img/devoxxExhibitionFloor.jpg">
-					<img height="900" data-src="img/devoxxCinemaFloor.jpg">
-					<aside class="notes" data-markdown>
-						- Unten gab es Essen und Sponsoren
-						- Oben war Hackathon und die Räume
-					</aside>
-				</section>
-				<section data-background-image="img/roomLookingForward.jpg">
-				</section>
-				<section>
-					<h1>Organization</h1>
-				</section>
-				<section data-background-iframe="https://cfp.devoxx.be/2017/index.html" data-background-interactive>
-				</section>
-				<section>
-					<img data-src="img/mydevoxx-list.png">
-					<img data-src="img/mydevoxx-detail.png">
-				</section>
-				<section>
-					<h1>Verpflegung</h1>
-					<img data-src="img/soup.jpg">
-					<img data-src="img/salad.jpg">
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## Themen
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <!--
+                -->
+                <section data-background-image="img/Banner-Devoxx-2017-V3.jpg">
+                </section>
+                <section>
+                    <h1>Location</h1>
+                </section>
+                <section data-background-image="img/GoogleMaps-Antwerpen.png">
+                </section>
+                <section>
+                    <img height="900" data-src="img/devoxxExhibitionFloor.jpg">
+                    <img height="900" data-src="img/devoxxCinemaFloor.jpg">
+                    <aside class="notes" data-markdown>
+                        - Unten gab es Essen und Sponsoren
+                        - Oben war Hackathon und die Räume
+                    </aside>
+                </section>
+                <section data-background-image="img/roomLookingForward.jpg">
+                </section>
+                <section>
+                    <h1>Organization</h1>
+                </section>
+                <section data-background-iframe="https://cfp.devoxx.be/2017/index.html" data-background-interactive>
+                </section>
+                <section>
+                    <img data-src="img/mydevoxx-list.png">
+                    <img data-src="img/mydevoxx-detail.png">
+                </section>
+                <section>
+                    <h1>Verpflegung</h1>
+                    <img data-src="img/soup.jpg">
+                    <img data-src="img/salad.jpg">
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ## Themen
 
-						- Java 9
-						- Machine Learning
-						- Spring Framework 5 / Spring Boot 2
-						- Kotlin
-						- Reactive Programming
-						- Serverless Functions
-					</textarea>
-				</section>
-				<section>
-					<h1>Java 9</h1>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/x7pkWlost64?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
-				</section>
-				<section>
-					<pre><code class="groovy">
-						def "should send basic request"() {
-							given: "a netty client"
-							NettyHttpClient client = new NettyHttpClient()
+                        - Java 9
+                        - Machine Learning
+                        - Spring Framework 5 / Spring Boot 2
+                        - Kotlin
+                        - Reactive Programming
+                        - Serverless Functions
+                    </textarea>
+                </section>
+                <section>
+                    <h1>Java 9</h1>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/x7pkWlost64?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
+                </section>
+                <section>
+                    <pre><code class="groovy">
+                        def "should send basic request"() {
+                            given: "a netty client"
+                            NettyHttpClient client = new NettyHttpClient()
 
-							when: "a basic request is sent"
-							HttpResponse response = client.sendRequest(outboundRequest(...))
+                            when: "a basic request is sent"
+                            HttpResponse response = client.sendRequest(outboundRequest(...))
 
-							then: "response has status code 200 and no content"
-							assertThat(response, is(
-								response()
-									.withStatusCode(200)
-									.withHeader(header(CONTENT_LENGTH, 0))
-							))
-						}
-					</code></pre>
-					<aside class="notes" data-markdown>
-						- Groovy erlaubt Strings als Methodennamen
-						- labels wie zuvor ins Story
-					</aside>
-				</section>
-			</div>
-		</div>
+                            then: "response has status code 200 and no content"
+                            assertThat(response, is(
+                                response()
+                                    .withStatusCode(200)
+                                    .withHeader(header(CONTENT_LENGTH, 0))
+                            ))
+                        }
+                    </code></pre>
+                    <aside class="notes" data-markdown>
+                        - Groovy erlaubt Strings als Methodennamen
+                        - labels wie zuvor ins Story
+                    </aside>
+                </section>
+            </div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				],
-				width: "100%",
-				height: "100%",
-				margin: 0,
-			});
-		</script>
-	</body>
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ],
+                width: "100%",
+                height: "100%",
+                margin: 0,
+            });
+        </script>
+    </body>
 </html>
