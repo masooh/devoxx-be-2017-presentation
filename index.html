@@ -66,35 +66,7 @@
                 -->
                 <section data-background-image="img/Banner-Devoxx-2017-V3.jpg">
                 </section>
-                <section>
-                    <h1>Location</h1>
-                </section>
-                <section data-background-image="img/GoogleMaps-Antwerpen.png">
-                </section>
-                <section>
-                    <img height="900" data-src="img/devoxxExhibitionFloor.jpg">
-                    <img height="900" data-src="img/devoxxCinemaFloor.jpg">
-                    <aside class="notes" data-markdown>
-                        - Unten gab es Essen und Sponsoren
-                        - Oben war Hackathon und die Räume
-                    </aside>
-                </section>
-                <section data-background-image="img/roomLookingForward.jpg">
-                </section>
-                <section>
-                    <h1>Organization</h1>
-                </section>
-                <section data-background-iframe="https://cfp.devoxx.be/2017/index.html" data-background-interactive>
-                </section>
-                <section>
-                    <img data-src="img/mydevoxx-list.png">
-                    <img data-src="img/mydevoxx-detail.png">
-                </section>
-                <section>
-                    <h1>Verpflegung</h1>
-                    <img data-src="img/soup.jpg">
-                    <img data-src="img/salad.jpg">
-                </section>
+                <section data-external-replace="sections/introduction.html"></section>
                 <section data-markdown>
                     <textarea data-template>
                         ## Themen
@@ -151,11 +123,11 @@
                         condition: function() {
                             return !!document.querySelector( '[data-external],[data-external-replace]' );
                         }
-                    },
+                    }
                 ],
                width: 1920,
                height: 1080,
-               margin: 0,
+               margin: 0
             });
         </script>
     </body>
