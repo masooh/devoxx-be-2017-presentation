@@ -1,0 +1,21 @@
+Brownbag Devoxx
+
+Agenda:
+
+- Introduction (Martin)
+- Java 9
+  * Releases (Leonard)
+  * Modulsystem (Martin)
+- Machine Learning (Martin?) -> Robot Maze
+- Spring Framework 5 / Spring Boot 2 (Martin)
+  * baseline Java 8
+  * prepared for Kotlin (Plugin -> open class)
+  * declarative Bean definition
+  * Spring MVC router functions
+  * Reactive Programming (Leonard)
+- Kotlin (Leonard)
+- Serverless Functions  (Leonard)
+- Youtube
+  * Leonards Favorites
+  * Martins Favorites
+  * Top Rated Talks (Martin)
