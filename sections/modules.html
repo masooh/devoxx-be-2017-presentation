@@ -1,9 +1,9 @@
 <section>
     <h2>Java 9 - Modules</h2>
-    <iframe width="853" height="480" data-src="https://www.youtube-nocookie.com/embed/HLPPXlhPzHE?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
-    <iframe width="853" height="480" data-src="https://www.youtube-nocookie.com/embed/IokevuiEKCY?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
-    <iframe width="853" height="480" data-src="https://www.youtube-nocookie.com/embed/g5OM1skiuew?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
-    <iframe width="853" height="480" data-src="https://www.youtube-nocookie.com/embed/tHTmFlVAyAc?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="640" height="360" data-src="https://www.youtube-nocookie.com/embed/HLPPXlhPzHE?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="640" height="360" data-src="https://www.youtube-nocookie.com/embed/IokevuiEKCY?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="640" height="360" data-src="https://www.youtube-nocookie.com/embed/g5OM1skiuew?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
+    <iframe width="640" height="360" data-src="https://www.youtube-nocookie.com/embed/tHTmFlVAyAc?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
 </section>
 <section data-background-image="img/modules-hello-world.png">
 </section>
@@ -37,5 +37,63 @@
     <aside class="notes" data-markdown>
         - nicht in java.se enthalten
         - wird entfernt in folgenden Releases (welches unbekannt)
+    </aside>
+</section>
+<section data-background-image="img/modules-reinhold-java.se.ee.png">
+    <aside class="notes" data-markdown>
+        - JDK Modules mit EE
+    </aside>
+</section>
+<section data-background-image="img/modules-reinhold-javadoc.png">
+</section>
+<section data-background-image="img/modules-reinhold-project-tree.png">
+    <aside class="notes" data-markdown>
+        - Beispiel Projekt
+        - zeigt mit emacs was Buckley erklärt hat
+    </aside>
+</section>
+<section data-background-image="img/modules-reinhold-jlink.png">
+    <aside class="notes" data-markdown>
+        - eigenes JRE nur aus base -> 10% Platz
+        - Start von hello Modul
+    </aside>
+</section>
+<section data-background-image="img/modules-reinhold-jlink-launcher.png">
+    <aside class="notes" data-markdown>
+        - Applikation mit gelinkt und komprimiert -> noch kleiner
+        - auf Server ohne JRE deployen
+        - Achtung bei JRE-Patch muss Bundle neu erstellt werden
+        - mehrere Java Apps auf Server kein Vorteil
+    </aside>
+</section>
+<section data-background-image="img/modules-migrating-jackson-error.png">
+    <aside class="notes" data-markdown>
+        - Jackson will via Reflection zugreifen
+    </aside>
+</section>
+<section data-background-image="img/modules-migrating-open.png">
+    <aside class="notes" data-markdown>
+        - open macht Klassen bei Runtime verfügbar für Reflection
+        - man kann nicht kompilieren gegen diese Klassen
+        - Überleitung: bisher guten Eindruck, aber ...
+    </aside>
+</section>
+<section data-background-image="img/modules-maven-java9.png">
+    <aside class="notes" data-markdown>
+        - Java 9 hat Berührungspunkte mit Maven
+    </aside>
+</section>
+<section data-background-image="img/modules-maven-artifact-conflict.png">
+    <aside class="notes" data-markdown>
+        - Automatic Modules -> kollidierende Artifakt-Ids
+        - umkringelt zählt nicht -> poms
+    </aside>
+</section>
+<section data-background-image="img/modules-maven-library-conflict.png">
+    <aside class="notes" data-markdown>
+        - lib-a-1.0.jar von lib-b via automatic modules genutzt
+        - lib-a-2.0.jar jetzt mit module-info com.lib.a von lib-c
+        - Maven wird nur eine lib-a.jar laden
+        - kann nicht kompilieren, lib-c fehlt jetzt com.lib.a
     </aside>
 </section>
