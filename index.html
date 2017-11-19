@@ -91,28 +91,6 @@
                 <section data-external-replace="sections/favorite-talks-leonard.html"></section>
                 <section data-external-replace="sections/favorite-talks-martin.html"></section>
                 <section data-external-replace="sections/top-rated-talks-community.html"></section>
-                <section>
-                    <pre><code class="groovy">
-                        def "should send basic request"() {
-                            given: "a netty client"
-                            NettyHttpClient client = new NettyHttpClient()
-
-                            when: "a basic request is sent"
-                            HttpResponse response = client.sendRequest(outboundRequest(...))
-
-                            then: "response has status code 200 and no content"
-                            assertThat(response, is(
-                                response()
-                                    .withStatusCode(200)
-                                    .withHeader(header(CONTENT_LENGTH, 0))
-                            ))
-                        }
-                    </code></pre>
-                    <aside class="notes" data-markdown>
-                        - Groovy erlaubt Strings als Methodennamen
-                        - labels wie zuvor ins Story
-                    </aside>
-                </section>
             </div>
         </div>
 
