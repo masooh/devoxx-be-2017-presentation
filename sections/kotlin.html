@@ -3,3 +3,83 @@
     <iframe title="Kotlin for Java Programmers by Venkat Subramaniam" width="853" height="480" data-src="https://www.youtube-nocookie.com/embed/7EVXypZDOos" frameborder="0" gesture="media" allowfullscreen></iframe>
     <iframe title="Why Spring ❤ Kotlin by Sébastien Deleuze" width="853" height="480" data-src="https://www.youtube-nocookie.com/embed/kbMXAjWEft0" frameborder="0" gesture="media" allowfullscreen></iframe>
 </section>
+    <section data-markdown>
+        <textarea data-template>
+            ## Kotlin
+
+            - Statically typed
+            - Nullable types
+            - `val` and `var`
+            - `final` by default
+            - Less language ceremony
+            - Extension methods
+            - Data classes
+            - Special framework support
+              - Spring Framework 5
+              - Gradle
+        </textarea>
+        <aside class="notes" data-markdown>
+            - strong type inference
+        </aside>
+    </section>
+<section>
+    <section>
+        <h2>Kotlin Data Class</h2>
+        <pre><code class="kotlin">
+            data class Person (val name: String, val age: Int)
+        </code></pre>
+    </section>
+    <section>
+        <h2>Java</h2>
+        <pre><code class="java">
+            public final class Person {
+               @NotNull
+               private final String name;
+               private final int age;
+
+               @NotNull
+               public final String getName() {
+                  return this.name;
+               }
+
+               public final int getAge() {
+                  return this.age;
+               }
+
+               public Person(@NotNull String name, int age) {
+                  Intrinsics.checkParameterIsNotNull(name, "name");
+                  super();
+                  this.name = name;
+                  this.age = age;
+               }
+
+               public String toString() {
+                  return "Person(name=" + this.name + ", age=" + this.age + ")";
+               }
+
+               public int hashCode() {
+                  return (this.name != null ? this.name.hashCode() : 0) * 31 + this.age;
+               }
+
+               public boolean equals(Object var1) {
+                  if (this != var1) {
+                     if (var1 instanceof Person) {
+                        Person var2 = (Person)var1;
+                        if (Intrinsics.areEqual(this.name, var2.name) && this.age == var2.age) {
+                           return true;
+                        }
+                     }
+
+                     return false;
+                  } else {
+                     return true;
+                  }
+               }
+            }
+        </code></pre>
+        <aside class="notes" data-markdown>
+            - Groovy erlaubt Strings als Methodennamen
+            - labels wie zuvor ins Story
+        </aside>
+    </section>
+</section>
