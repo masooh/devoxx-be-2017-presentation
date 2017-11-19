@@ -6,41 +6,60 @@
     <iframe width="640" height="360" data-src="https://www.youtube-nocookie.com/embed/tHTmFlVAyAc?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
 </section>
 <section data-background-image="img/modules-hello-world.png">
+    <aside class="notes" data-markdown>
+        - in `module-info.java` Meta-Infos
+        - Trennung Interna und Externa
+    </aside>
 </section>
 <section data-background-image="img/modules-hello-base.png">
     <aside class="notes" data-markdown>
-        - export package
-        - requires module
+        - `exports` benennt packages
+        - `requires` benennt module
         - neue Sichtbarkeit neben private, package, public
+        - public nur public falls exportiert
+        - `requires` `java.base` nicht notwendig (implizit)
     </aside>
 </section>
 <section data-background-image="img/modules-run.png">
+    <aside class="notes" data-markdown>
+        - `-p` Pfad der Module
+        - `-m` Start-Modul
+    </aside>
 </section>
 <section data-background-image="img/modules-graph.png">
     <aside class="notes" data-markdown>
-        - zu compile time erzeugt
+        - Modul-Graph zu compile time erzeugt
         - schneller als Classpath, keine lineare Suche
         - split packages müssen umgebaut werden -> API
     </aside>
 </section>
 <section data-background-image="img/modules-automatic-names.png">
+    <aside class="notes" data-markdown>
+        - falls keine `module-info.java` vorhanden - automatic
+        - Modul-Namen leitet sich von artifactId ab
+    </aside>
 </section>
 <section data-background-image="img/modules-automatic-infos.png">
     <aside class="notes" data-markdown>
-        - modules-info wird automatisch erstellt
+        - `modules-info.java` wird automatisch erstellt
         - Chaos entspricht der Classpath-Welt
     </aside>
 </section>
 <section data-background-image="img/modules-jdk.png">
+    <aside class="notes" data-markdown>
+        - JDK selbst auch modularisiert
+        - `java.base` wie gesagt implizit
+    </aside>
 </section>
 <section data-background-image="img/modules-jdk-deprecated.png">
     <aside class="notes" data-markdown>
-        - nicht in java.se enthalten
+        - nicht in `java.se` enthalten
         - wird entfernt in folgenden Releases (welches unbekannt)
     </aside>
 </section>
 <section data-background-image="img/modules-reinhold-java.se.ee.png">
     <aside class="notes" data-markdown>
+        - nächster Talk - Mark Reinhold
         - JDK Modules mit EE
     </aside>
 </section>
@@ -54,13 +73,13 @@
 </section>
 <section data-background-image="img/modules-reinhold-jlink.png">
     <aside class="notes" data-markdown>
-        - eigenes JRE nur aus base -> 10% Platz
+        - eigenes JRE nur aus `java.base` -> 10% Platz
         - Start von hello Modul
     </aside>
 </section>
 <section data-background-image="img/modules-reinhold-jlink-launcher.png">
     <aside class="notes" data-markdown>
-        - Applikation mit gelinkt und komprimiert -> noch kleiner
+        - Applikation mit JRE gelinkt und komprimiert -> noch kleiner
         - auf Server ohne JRE deployen
         - Achtung bei JRE-Patch muss Bundle neu erstellt werden
         - mehrere Java Apps auf Server kein Vorteil
@@ -68,18 +87,21 @@
 </section>
 <section data-background-image="img/modules-migrating-jackson-error.png">
     <aside class="notes" data-markdown>
+        - nächster Talk: Bsp mit Jackson
         - Jackson will via Reflection zugreifen
     </aside>
 </section>
 <section data-background-image="img/modules-migrating-open.png">
     <aside class="notes" data-markdown>
-        - open macht Klassen bei Runtime verfügbar für Reflection
+        - `opens` macht Klassen bei Runtime verfügbar für Reflection
         - man kann nicht kompilieren gegen diese Klassen
-        - Überleitung: bisher guten Eindruck, aber ...
+        - Überleitung: bisher guten Eindruck: bessere Kapselung, schneller
+        - aber ...
     </aside>
 </section>
 <section data-background-image="img/modules-maven-java9.png">
     <aside class="notes" data-markdown>
+        - Maven
         - Java 9 hat Berührungspunkte mit Maven
     </aside>
 </section>
@@ -91,9 +113,9 @@
 </section>
 <section data-background-image="img/modules-maven-library-conflict.png">
     <aside class="notes" data-markdown>
-        - lib-a-1.0.jar von lib-b via automatic modules genutzt
-        - lib-a-2.0.jar jetzt mit module-info com.lib.a von lib-c
-        - Maven wird nur eine lib-a.jar laden
-        - kann nicht kompilieren, lib-c fehlt jetzt com.lib.a
+        - `lib-a-1.0.jar` von `lib-b` via automatic modules genutzt
+        - `lib-a-2.0.jar` jetzt mit module-info `com.lib.a` von `lib-c`
+        - Maven wird nur eine `lib-a.jar` laden
+        - kann nicht kompilieren, `lib-c` fehlt jetzt `com.lib.a`
     </aside>
 </section>

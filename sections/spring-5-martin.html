@@ -11,20 +11,22 @@
 </section>
 <section data-background-image="img/spring5-trends-programmatic.png">
     <aside class="notes" data-markdown>
+        - Alternative Bean Definition
         - functional (Instance) Supplier interface -> keine Reflection
-        - Foo::new (Methodenreferenz) -> kein Class.newInstance() (auch Reflection)
+        - `Foo::new` (Methodenreferenz) -> kein `Class.newInstance()` (auch Reflection)
         - für kleine Microservices gedacht, kombinierbar mit Scanning
     </aside>
 </section>
 <section data-background-image="img/spring5-trends-kotlin.png">
     <aside class="notes" data-markdown>
-        - Kotlin extensions in Spring enthalten
+        - gleiches in Kotlin
+        - nötige Kotlin extensions in Spring enthalten
         - Vorteil Kotlin kennt return type von Generic
     </aside>
 </section>
 <section data-background-image="img/spring5-gems-logging.png">
     <aside class="notes" data-markdown>
-        - neue Logging Bridge spring-jcl
+        - neue Logging Bridge `spring-jcl`
         - kann mit allen gängigen umgehen
         - kein andere bridge oder exclude mehr notwendig
     </aside>
@@ -37,20 +39,20 @@
 </section>
 <section data-background-image="img/spring5-gems-nullable.png">
     <aside class="notes" data-markdown>
-        - Spring 5 Code ist nun per default non-null, sonst @Nullable annotiert
+        - Spring 5 Code ist nun per default non-null, sonst `@Nullable` annotiert
         - Treiber Kotlin's non-null variables wie von Leonard berichtet
     </aside>
 </section>
 <section data-background-image="img/spring5-gems-data.png">
     <aside class="notes" data-markdown>
-        - data binding mit immutable classes
+        - data binding mit immutable classes -> Konstruktor statt Setter
         - properties als Parameter-Namen (entweder -parameter oder Annotation)
     </aside>
 </section>
 <section data-background-image="img/spring5-router.png">
     <aside class="notes" data-markdown>
         - Spring Boot 2 -> basiert auf Spring 5, neuer webflux Starter
-        - Router Bean -> @Controller von Annotations befreien
+        - Router Bean -> `@Controller` von Annotations befreien
         - hier Kotlin, sehr kurz
         - Talk: Umstellung Kotlin, Rest Anpassungen (leider vermischt)
     </aside>
