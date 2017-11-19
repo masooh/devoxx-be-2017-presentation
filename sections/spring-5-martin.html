@@ -1,0 +1,57 @@
+<section>
+    <h2>Spring 5</h2>
+    <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/69tJKcmKVQk" frameborder="0" allowfullscreen></iframe>
+    <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/LQN2ptVdaJE" frameborder="0" allowfullscreen></iframe>
+</section>
+<section data-background-image="img/spring5-trends-java8.png">
+    <aside class="notes" data-markdown>
+        - baseline Java 8
+        - support JUnit 5
+    </aside>
+</section>
+<section data-background-image="img/spring5-trends-programmatic.png">
+    <aside class="notes" data-markdown>
+        - functional (Instance) Supplier interface -> keine Reflection
+        - Foo::new (Methodenreferenz) -> kein Class.newInstance() (auch Reflection)
+        - für kleine Microservices gedacht, kombinierbar mit Scanning
+    </aside>
+</section>
+<section data-background-image="img/spring5-trends-kotlin.png">
+    <aside class="notes" data-markdown>
+        - Kotlin extensions in Spring enthalten
+        - Vorteil Kotlin kennt return type von Generic
+    </aside>
+</section>
+<section data-background-image="img/spring5-gems-logging.png">
+    <aside class="notes" data-markdown>
+        - neue Logging Bridge spring-jcl
+        - kann mit allen gängigen umgehen
+        - kein andere bridge oder exclude mehr notwendig
+    </aside>
+</section>
+<section data-background-image="img/spring5-gems-indexer.png">
+    <aside class="notes" data-markdown>
+        - Component Scan konnt bislang nur durch Verringerung des Suchraumes verbessert werden
+        - jetzt wird zu Build Zeit Index aufgebaut und bei runtime verwendet
+    </aside>
+</section>
+<section data-background-image="img/spring5-gems-nullable.png">
+    <aside class="notes" data-markdown>
+        - Spring 5 Code ist nun per default non-null, sonst @Nullable annotiert
+        - Treiber Kotlin's non-null variables wie von Leonard berichtet
+    </aside>
+</section>
+<section data-background-image="img/spring5-gems-data.png">
+    <aside class="notes" data-markdown>
+        - data binding mit immutable classes
+        - properties als Parameter-Namen (entweder -parameter oder Annotation)
+    </aside>
+</section>
+<section data-background-image="img/spring5-router.png">
+    <aside class="notes" data-markdown>
+        - Spring Boot 2 -> basiert auf Spring 5, neuer webflux Starter
+        - Router Bean -> @Controller von Annotations befreien
+        - hier Kotlin, sehr kurz
+        - Talk: Umstellung Kotlin, Rest Anpassungen (leider vermischt)
+    </aside>
+</section>
