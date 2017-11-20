@@ -119,3 +119,19 @@
         - kann nicht kompilieren, `lib-c` fehlt jetzt `com.lib.a`
     </aside>
 </section>
+<section data-markdown>
+    <textarea data-template>
+        ## Automatic Module Names
+
+        - Allows Java 9 Modules to safely depend on your lib
+        - Add an entry to your `MANIFEST.MF`
+        - `Automatic-Module-Name: org.project.library.module`
+        - Follow reverse DNS notation similar to package names
+        - No split packages
+        - Already implemented by many OS projects, e.g., JUnit 5
+
+        [More Info](http://blog.joa.org/2017/05/java-se-9-jpms-automatic-modules.html)
+    </textarea>
+    <aside class="notes" data-markdown>
+    </aside>
+</section>

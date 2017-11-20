@@ -11,3 +11,39 @@
     </blockquote>
     <a href="https://youtu.be/yAXgkSlrmBA?t=12m00s" target="_blank">Parallel and Asynchronous Programming [...] by Venkat Subramaniam </a>
 </section>
+<section data-markdown>
+    <textarea data-template>
+        ## Reactive Programming 101
+
+        - [Reactive Streams](http://www.reactive-streams.org/)
+          - Producer
+          - Subscriber
+          - Subscription
+          - Processor
+    </textarea>
+    <aside class="notes" data-markdown>
+        A Publisher is a provider of a potentially unbounded number of sequenced elements,
+        publishing them according to the demand received from its Subscriber(s).
+    </aside>
+</section>
+<section data-markdown>
+    <textarea data-template>
+        ## Project Reactor
+
+        - Implements Reactive Streams
+        - Mono/Flux
+          - Mono: 0..1
+          - Flux: 0..n
+        - Adds higher level functionality
+          - map/flatMap
+          - debounce
+          - delay
+          - retry
+          - timeout (with fallback)
+          - ...
+    </textarea>
+    <aside class="notes" data-markdown>
+        A Publisher is a provider of a potentially unbounded number of sequenced elements,
+        publishing them according to the demand received from its Subscriber(s).
+    </aside>
+</section>
